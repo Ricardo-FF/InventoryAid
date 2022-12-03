@@ -114,6 +114,7 @@ void jogo(){
         }
       }//Valida que as chances acabaram e informa que o jogador perdeu e qual a palavra que deveria adivinhar
       if(chance == 0){
+        system("clear");
         printf("Você perdeu :(\n");
         printf("A palavra era \"");
         for (int e = 0; e < tamanhos; e++){
@@ -135,7 +136,7 @@ void jogo(){
     if(ctrl==MAX){
       system("clear");
       printf("Você Acertou!! :)");
-      system("sleep 6");//Espera 6 segundos antes de quebrar o do/while
+      printf("\n");
       break;
     }else{
       //Reseta o vetor usado para verificar as letras acertadas, impede que fique sujeira
@@ -145,8 +146,6 @@ void jogo(){
     }
     printf("\n");
   }while(chance > 0);//Repete o "do" enquanto o usuário tiver chances
-
-menu_inicial();//Chama o procedimento responsável pela tela de inicial
 }
 
 //Função que direciona o usuário entre as telas
